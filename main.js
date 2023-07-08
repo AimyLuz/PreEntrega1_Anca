@@ -1,7 +1,7 @@
 
 
 function inicio () {
-alert("esto es un alert")
+
 let nombre
 let salud 
 let energia
@@ -21,9 +21,9 @@ const mascotaViva = () => salud > 0 && energia > 0;
 let comer 
 let amor
 while(mascotaViva()){
-let accion = prompt("Escribi 'comida' si queres dale energía o 'amor' si queres mejorar su salud");
+let accion = prompt("Escribi 'comida' si queres dale energía o 'amor' si queres mejorar su salud").toLowerCase();
 if (accion == "comida") {
-comer = prompt ("¿Qué queres darle de comer? Elegi una de las copciones que estan en la pantalla y escribilo")
+comer = prompt ("¿Qué queres darle de comer? Elegi una de las copciones que estan en la pantalla y escribilo").toLowerCase()
     if (comer == "zanahoria") {
 energia = energia + 10; 
 console.log ("le diste zanahoria")
@@ -39,7 +39,7 @@ console.log ("Y la salud de " + nombre +" es de: " + salud);
 }
     else if (comer == "sandia con vino") {
         energia = energia - 100;
-        salud = slaud - 100;
+        salud = salud - 100;
         console.log ("Le diste sandía con vino, que estas mal de la cabeza???! SOS UN ASESINO! ESTOY LLAMANDO A LA POLICIA ")
         console.log ("Ahora la energía de " + nombre + " es de: " + energia);
         console.log ("Y la salud de " + nombre +" es de: " + salud);
@@ -63,8 +63,8 @@ console.log ("Y la salud de " + nombre +" es de: " + salud);
     }
 }
 else if (accion == "amor") {
-    amor = prompt ("¿De que manera le queres dar amor? elegí una de las opciones de la pantalla y escribila acá")
-    if ( amor == abrazo ) {
+    amor = prompt ("¿De que manera le queres dar amor? elegí una de las opciones de la pantalla y escribila acá").toLowerCase()
+    if ( amor == "abrazo" ) {
         salud = salud + 20;
         energia = energia - 5;
         console.log ("Le diste un abrazo a tu mascota, " + nombre + " es muy feliz");
@@ -78,10 +78,10 @@ else if (accion == "amor") {
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
     }
-    else if (amor == "palamada en la espalda") {
+    else if (amor == "palmada en la espalda") {
         salud = salud - 20;
         energia = energia - 5;
-        console.log ("Le diste un abrazo a tu mascota, " + nombre + " es muy feliz");
+        console.log ("Le diste una palmada en la espalda a tu mascota, esa frialdad le destruye el corazon a " + nombre);
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
     }
