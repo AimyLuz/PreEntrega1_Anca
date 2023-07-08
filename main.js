@@ -21,7 +21,7 @@ const mascotaViva = () => salud > 0 && energia > 0;
 let comer 
 let amor
 while(mascotaViva()){
-
+console.log ("----------------------")
 let accion = prompt("Escribi 'comida' si queres dale energía o 'amor' si queres mejorar su salud").toLowerCase();
 if (accion == "comida") {
 comer = prompt ("¿Qué queres darle de comer? Elegi una de las copciones que estan en la pantalla y escribilo").toLowerCase()
