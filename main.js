@@ -32,7 +32,7 @@ let accion = prompt("Escribí 'comida' si querés darle energía o 'amor' si que
 if (accion == "comida") {
 comer = prompt ("¿Qué querés darle de comer? Elegí una de las opciones que están en la pantalla y escribila.").toLowerCase()
     if (comer == "zanahoria") {
-energia = energia + 10; 
+energia = energia + 30; 
 console.log ("Le diste zanahoria, ¡buena elección!");
 console.log ("Y la salud de " + nombre +" es de: " + salud);
 console.log ("Ahora la energía de " + nombre + " es de: " + energia);
@@ -70,7 +70,7 @@ salud = salud - 20;
         console.log ("Ahora la energía de " + nombre + " es de: " + energia);
     }
     else if (comer == "pepino") {
-        energia = energia + 10;
+        energia = energia + 20;
         console.log ("Le diste pepino, buena elección, es una comida muy sana pero no llena mucho.");
         console.log ("Y la salud de " + nombre +" es de: " + salud);
         console.log ("Ahora la energía de " + nombre + " es de: " + energia);
