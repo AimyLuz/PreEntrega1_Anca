@@ -7,129 +7,187 @@ let salud
 let energia
 let edad 
 
-nombre = prompt ("Ingresa el nombre de tu mascota");
-console.log(nombre);
+nombre = prompt ("Ingresá el nombre de tu mascota");
+console.log ("¡Bienvenidx! Ahora tenés una mascota que se llama " + nombre + ". Cuidala dándole comida y amor, elegí bien ya que " + nombre + ", al final de cada día, pierde 20 puntos de salud y 20 puntos de energía.")
 salud = 100;
-energia = 30;
+energia = 50;
 edad = 1;
 console.log ("Su salud es de: " + salud);
 console.log ("Su energía es de: " + energia);
 console.log ("Su edad es de: " + edad + " día");
-
+console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...")
+energia = energia - 20;
+salud = salud - 20;
+console.log("Perdiendo salud... Perdiendo energía...")
 const mascotaViva = () => salud > 0 && energia > 0;
 //comidas
 let comer 
 let amor
 while(mascotaViva()){
 console.log ("----------------------")
-let accion = prompt("Escribi 'comida' si queres dale energía o 'amor' si queres mejorar su salud").toLowerCase();
+console.log ("¡Hoy comienza un nuevo día!")
+console.log ("Hoy la salud de " + nombre + " es de " + salud)
+console.log ("Y su energía es de " + energia)
+let accion = prompt("Escribí 'comida' si querés darle energía o 'amor' si querés mejorar su salud.").toLowerCase();
 if (accion == "comida") {
-comer = prompt ("¿Qué queres darle de comer? Elegi una de las copciones que estan en la pantalla y escribilo").toLowerCase()
+comer = prompt ("¿Qué querés darle de comer? Elegí una de las opciones que están en la pantalla y escribila.").toLowerCase()
     if (comer == "zanahoria") {
 energia = energia + 10; 
-console.log ("le diste zanahoria, buena elección!")
-console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+console.log ("Le diste zanahoria, ¡buena elección!");
 console.log ("Y la salud de " + nombre +" es de: " + salud);
+console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+if (salud > 0 && energia > 0) {
 edad += 1;
-console.log (nombre + " tiene " + edad + " días de vida")
-}
+console.log (nombre + " tiene " + edad + " días de vida");
+console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...")
+console.log("Perdiendo salud... Perdiendo energía...")
+energia = energia - 20;
+salud = salud - 20;
+                                }
+        }
+
     else if (comer == "hamburguesa") {
     energia = energia + 80;
     salud = salud - 30;
-    console.log ("Le diste una hamburguesa, eso da mucha energia pero no es muy sano... le sube el colesterol a " + nombre)
-    console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+    console.log ("Le diste una hamburguesa, eso da mucha energía pero no es muy sano... le sube el colesterol a " + nombre);
     console.log ("Y la salud de " + nombre +" es de: " + salud);
+    console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+    
+    if (salud > 0 && energia > 0) {
     edad += 1;
-    console.log (nombre + " tiene " + edad + " días de vida")
+    console.log (nombre + " tiene " + edad + " días de vida");
+    console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+console.log("Perdiendo salud... Perdiendo energía...");
+energia = energia - 20;
+salud = salud - 20;
 }
+    }
     else if (comer == "sandia con vino") {
-        energia = energia - 100;
-        salud = salud - 100;
-        console.log ("Le diste sandía con vino, que estas mal de la cabeza???! SOS UN ASESINO! ESTOY LLAMANDO A LA POLICIA!")
-        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+        energia = 0;
+        salud = 0;
+        console.log ("Le diste sandía con vino, ¡¿¿¿qué estás mal de la cabeza???! ¡SOS UN ASESINO! ¡ESTOY LLAMANDO A LA POLICÍA!");
         console.log ("Y la salud de " + nombre +" es de: " + salud);
-        edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
     }
     else if (comer == "pepino") {
         energia = energia + 10;
-        console.log ("Le diste pepino, buena elección es una comida muy sana, pero no llena mucho")
-        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+        console.log ("Le diste pepino, buena elección, es una comida muy sana pero no llena mucho.");
         console.log ("Y la salud de " + nombre +" es de: " + salud);
+        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+console.log("Perdiendo salud... Perdiendo energía...");
+energia = energia - 20;
+salud = salud - 20;
     }
+}
     else if (comer == "helado") {
         energia = energia + 30;
         salud = salud -10;
-        console.log ("Le diste helado, que rico pero las mascotas no pueden comer eso, por lo que le da diabetes de mascotas")
-        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+        console.log ("Le diste helado, ¡qué rico! Pero las mascotas no pueden comer eso, por lo que le da diabetes de mascotas");
         console.log ("Y la salud de " + nombre +" es de: " + salud);
-        edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
-        
-    }
-    else {
-        alert("el dato ingresado es invalido")
+        console.log ("Ahora la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
+            edad += 1;
+            console.log (nombre + " tiene " + edad + " días de vida");
+            console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+            console.log("Perdiendo salud... Perdiendo energía...");
+            energia = energia - 20;
+            salud = salud - 20;
     }
 }
+    else {
+        alert("el dato ingresado es inválido.")
+    }
+}
+//amor
 else if (accion == "amor") {
-    amor = prompt ("¿De que manera le queres dar amor? elegí una de las opciones de la pantalla y escribila acá").toLowerCase()
+    amor = prompt ("¿De qué manera le querés dar amor? Elegí una de las opciones de la pantalla y escribila acá").toLowerCase()
     if ( amor == "abrazo" ) {
         salud = salud + 20;
-        energia = energia - 5;
         console.log ("Le diste un abrazo a tu mascota, " + nombre + " es muy feliz");
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+        console.log("Perdiendo salud... Perdiendo energía...");
+        energia = energia - 20;
+        salud = salud - 20;
     }
+}
     else if (amor == "leerle un cuento") {
         salud = salud - 20;
         energia = energia - 10;
-        console.log ("Le leiste un cuento a tu mascota, tu mascota no te escucho y " + nombre + " se puso a jugar, se golpeó la cabeza corriendo");
+        console.log ("Le leíste un cuento a tu mascota, tu mascota no te escuchó y " + nombre + " se puso a jugar, se golpeó la cabeza corriendo. Baja su salud y su energía.");
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+        console.log("Perdiendo salud... Perdiendo energía...");
+        energia = energia - 20;
+        salud = salud - 20;
     }
+}
     else if (amor == "palmada en la espalda") {
         salud = salud - 20;
         energia = energia - 5;
-        console.log ("Le diste una palmada en la espalda a tu mascota, esa frialdad le destruye el corazon a " + nombre);
+        console.log ("Le diste una palmada en la espalda a tu mascota, esa frialdad le destruye el corazón a " + nombre + ". Baja su salud y su energía.");
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+        console.log("Perdiendo salud... Perdiendo energía...");
+        energia = energia - 20;
+        salud = salud - 20;
     }
+}
     else if (amor == "beso") {
         salud = salud + 40;
-        energia = energia - 1;
         console.log ("Le diste un beso a tu mascota, " + nombre + " es muy feliz");
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+        console.log("Perdiendo salud... Perdiendo energía...");
+        energia = energia - 20;
+        salud = salud - 20;
     }
+}
     else if (amor == "jugar") {
         salud = salud + 40;
         energia = energia - 20;
-        console.log ("Jugaste con tu mascota, " + nombre + " es muy feliz pero gasto mucha energía");
+        console.log ("Jugaste con tu mascota, " + nombre + " es muy feliz pero gastó mucha energía");
         console.log ("Ahora la salud de " + nombre +" es de: " + salud);
         console.log ("Y la energía de " + nombre + " es de: " + energia);
+        if (salud > 0 && energia > 0) {
         edad += 1;
-        console.log (nombre + " tiene " + edad + " días de vida")
+        console.log (nombre + " tiene " + edad + " días de vida");
+        console.log ("Ya es de noche. " + nombre + " está durmiendo... ZzZzZz...");
+        console.log("Perdiendo salud... Perdiendo energía...");
+        energia = energia - 20;
+        salud = salud - 20;
     }
+}
     else  {
-        alert("el dato ingresado es invalido")
+        alert("el dato ingresado es inválido.");
     }
 }
 else {
-    alert("el dato ingresado es invalido")
+    alert("el dato ingresado es inválido.");
 }
 }
 
-console.log ("Tu mascota esta MUERTA")
-alert("Tu mascota murió")
+console.log ("Tu mascota esta MUERTA");
+alert("Tu mascota murió ✝");
 
 }
