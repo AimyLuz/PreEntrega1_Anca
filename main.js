@@ -16,7 +16,7 @@ function inicio() {
     nombre = prompt("Ingresá el nombre de tu mascota");
     console.log("¡Bienvenidx! Ahora tenés una mascota que se llama " + nombre + ". Cuidala dándole comida y amor, elegí bien ya que " + nombre + ", al final de cada día, pierde 20 puntos de salud y 20 puntos de energía.")
     salud = 100;
-    energia = 50;
+    energia = 80;
     edad = 1;
     console.log("Su salud es de: " + salud);
     console.log("Su energía es de: " + energia);
@@ -26,7 +26,7 @@ function inicio() {
     salud = salud - 20;
     console.log("Perdiendo salud... Perdiendo energía...")
 
-    //comidas
+//si la mascota esta viva se ejecuta el while
 
     while (mascotaViva()) {
         console.log("----------------------")
@@ -34,6 +34,7 @@ function inicio() {
         console.log("Hoy la salud de " + nombre + " es de " + salud)
         console.log("Y su energía es de " + energia)
         let accion = prompt("Escribí 'comida' si querés darle energía o 'amor' si querés mejorar su salud.").toLowerCase();
+            //comidas
         if (accion == "comida") {
             comer = prompt("¿Qué querés darle de comer? Elegí una de las opciones que están en la pantalla y escribila.").toLowerCase()
             if (comer == "zanahoria") {
@@ -89,7 +90,7 @@ function inicio() {
                 }
             }
             else if (comer == "helado") {
-                energia = energia + 30;
+                energia = energia + 40;
                 salud = salud - 10;
                 console.log("Le diste helado, ¡qué rico! Pero las mascotas no pueden comer eso, por lo que le da diabetes de mascotas");
                 console.log("Y la salud de " + nombre + " es de: " + salud);
@@ -112,7 +113,8 @@ function inicio() {
             amor = prompt("¿De qué manera le querés dar amor? Elegí una de las opciones de la pantalla y escribila acá").toLowerCase()
             if (amor == "abrazo") {
                 salud = salud + 20;
-                console.log("Le diste un abrazo a tu mascota, " + nombre + " es muy feliz");
+                energia = energia + 5;
+                console.log("Le diste un abrazo a tu mascota, " + nombre + " es muy feliz y no solo aumenta su Salud, sino que también su Energía");
                 console.log("Ahora la salud de " + nombre + " es de: " + salud);
                 console.log("Y la energía de " + nombre + " es de: " + energia);
                 if (salud > 0 && energia > 0) {
@@ -169,7 +171,7 @@ function inicio() {
                 }
             }
             else if (amor == "jugar") {
-                salud = salud + 40;
+                salud = salud + 80;
                 energia = energia - 20;
                 console.log("Jugaste con tu mascota, " + nombre + " es muy feliz pero gastó mucha energía");
                 console.log("Ahora la salud de " + nombre + " es de: " + salud);
@@ -191,7 +193,7 @@ function inicio() {
             alert("el dato ingresado es inválido.");
         }
     }
-
+//tu mascota murio
     console.log("Tu mascota esta MUERTA");
     alert("Tu mascota murió ✝");
 
